@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/styles.css">
     <title>Новости</title>
-  </head>
-  <body>
-    <header>
-      <h1>Заголовок сайта</h1>
-    </header>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
 
-    <nav>
-      <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="./news.html">Новости</a></li>
-        <li><a href="./goods.html">Товары</a></li>
-        <li><a href="./contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="./news.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="./goods.html" class="nav-link">Товары</a></li>
+                <li class="nav-item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
 
-    <main>
-      <h2>Новости</h2>
+        <main class="content">
+            <h2 class="section-title">Новости</h2>
 
-      <article>
-        <h3>Заголовок первой новости</h3>
-        <div>
-          <time datetime="2024-01-15">15 января 2024</time>
-          <span>Автор: Иван Иванов</span>
-        </div>
-        <p>
-          Текст первой новости. Здесь содержится основная информация о событии
-          или происшествии.
-        </p>
-      </article>
+            <article class="experience-card">
+                <h3 class="experience-title">Заголовок первой новости</h3>
+                <div class="meta-info">
+                    <time datetime="2024-01-15">15 января 2024</time>
+                    <span>Автор: Иван Иванов</span>
+                </div>
+                <p class="experience-desc">
+                    Текст первой новости. Здесь содержится основная информация о событии
+                    или происшествии.
+                </p>
+            </article>
 
-      <article>
-        <h3>Заголовок второй новости</h3>
-        <div>
-          <time datetime="2024-01-14">14 января 2024</time>
-          <span>Автор: Петр Петров</span>
-        </div>
-        <p>Текст второй новости. Описание важного события или обновления.</p>
-      </article>
+            <article class="experience-card">
+                <h3 class="experience-title">Заголовок второй новости</h3>
+                <div class="meta-info">
+                    <time datetime="2024-01-14">14 января 2024</time>
+                    <span>Автор: Петр Петров</span>
+                </div>
+                <p class="experience-desc">Текст второй новости. Описание важного события или обновления.</p>
+            </article>
 
-      <article>
-        <h3>Заголовок третьей новости</h3>
-        <div>
-          <time datetime="2024-01-13">13 января 2024</time>
-          <span>Автор: Мария Сидорова</span>
-        </div>
-        <p>
-          Текст третьей новости. Информация о новых достижениях или проектах.
-        </p>
-      </article>
-    </main>
+            <article class="experience-card">
+                <h3 class="experience-title">Заголовок третьей новости</h3>
+                <div class="meta-info">
+                    <time datetime="2024-01-13">13 января 2024</time>
+                    <span>Автор: Мария Сидорова</span>
+                </div>
+                <p class="experience-desc">
+                    Текст третьей новости. Информация о новых достижениях или проектах.
+                </p>
+            </article>
+        </main>
 
-    <footer>
-      <p>&copy; 2024 Наш сайт. Все права защищены.</p>
-    </footer>
-  </body>
+        <footer class="footer">
+            <p>&copy; 2024 Наш сайт. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
 </html>

@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/styles.css">
     <title>Контакты</title>
-  </head>
-  <body>
-    <header>
-      <h1>Заголовок сайта</h1>
-    </header>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
 
-    <nav>
-      <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="./news.html">Новости</a></li>
-        <li><a href="./goods.html">Товары</a></li>
-        <li><a href="./contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="./news.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="./goods.html" class="nav-link">Товары</a></li>
+                <li class="nav-item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
 
-    <main>
-      <h2>Контакты</h2>
+        <main class="content">
+            <h2 class="section-title">Контакты</h2>
 
-      <div class="contact-info">
-        <p>
-          <strong>Электронная почта:</strong>
-          <a href="mailto:info@example.com">info@example.com</a>
-        </p>
-        <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</p>
-        <button onclick="callMe()">Позвоните мне</button>
-      </div>
-    </main>
+            <div class="contact-info about-me">
+                <p>
+                    <strong>Электронная почта:</strong>
+                    <a href="mailto:info@example.com">info@example.com</a>
+                </p>
+                <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</p>
+                <button class="skill-tag" onclick="callMe()">Позвоните мне</button>
+            </div>
+        </main>
 
-    <footer>
-      <p>&copy; 2024 Наш сайт. Все права защищены.</p>
-    </footer>
+        <footer class="footer">
+            <p>&copy; 2024 Наш сайт. Все права защищены.</p>
+        </footer>
+    </div>
 
     <script>
-      function callMe() {
-        alert("Спасибо! Мы свяжемся с вами в ближайшее время.");
-      }
+        function callMe() {
+            alert("Спасибо! Мы свяжемся с вами в ближайшее время.");
+        }
     </script>
-  </body>
+</body>
 </html>
