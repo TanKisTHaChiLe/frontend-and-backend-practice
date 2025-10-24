@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
+        <header class="header">
+            <h1>Контакты</h1>
+        </header>
 
         <nav class="nav">
             <ul class="nav-list">
@@ -22,14 +24,15 @@
         <main class="content">
             <h2 class="section-title">Контакты</h2>
 
-            <div class="contact-info about-me">
+            <section class="contact-info about-me" aria-labelledby="contact-title">
+                <h3 id="contact-title" class="visually-hidden">Контактная информация</h3>
                 <p>
                     <strong>Электронная почта:</strong>
                     <a href="mailto:info@example.com">info@example.com</a>
                 </p>
                 <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</p>
                 <button class="skill-tag" onclick="callMe()">Позвоните мне</button>
-            </div>
+            </section>
         </main>
 
         <footer class="footer">

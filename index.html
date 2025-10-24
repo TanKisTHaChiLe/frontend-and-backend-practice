@@ -8,8 +8,11 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="header">Хэдер</div>
-      <div class="nav">
+      <header class="header">
+        <h1>Главная</h1>
+      </header>
+      
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Главная</a>
@@ -17,9 +20,6 @@
           <li class="nav-item">
             <a class="nav-link" href="pages/news.html">Новости</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="pages/practices.html">Практики</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="pages/goods.html">Товары</a>
           </li>
@@ -27,37 +27,42 @@
             <a class="nav-link" href="pages/contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <div class="content">
-        <div class="profile-header">
-          <h1 class="profile-title">Информация об авторе</h1>
+      </nav>
+      
+      <main class="content">
+        <section class="profile-header" aria-labelledby="profile-title">
+          <h1 id="profile-title" class="profile-title">Информация об авторе</h1>
           <img
             class="profile-photo"
             src="images/photo.jpg"
-            alt="Фото
-автора"
+            alt="Фото автора"
           />
-          <h2 class="profile-name">Ланец Артем николаевич</h2>
+          <h2 class="profile-name">Ланец Артем Николаевич</h2>
           <p class="profile-group">ЭФБО-02-24</p>
-        </div>
+        </section>
 
-        <div class="about-me">
+        <section class="about-me" aria-labelledby="about-title">
+          <h2 id="about-title" class="visually-hidden">Обо мне</h2>
           <p>
             Учусь в РТУ МИРЭА, на фуллстек разработчика и мечтаю попасть на
             стажировку
           </p>
-        </div>
-        <h2 class="section-title">Навыки</h2>
-        <div class="skills-container">
-          <div class="skill-tag">JavaScript/TypeScript</div>
-          <div class="skill-tag">React</div>
-          <div class="skill-tag">Webpack/Vite/CRA</div>
-          <div class="skill-tag">MVP/MVC</div>
-        </div>
+        </section>
+        
+        <section class="skills-section" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="section-title">Навыки</h2>
+          <div class="skills-container">
+            <span class="skill-tag">JavaScript/TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Webpack/Vite/CRA</span>
+            <span class="skill-tag">MVP/MVC</span>
+          </div>
+        </section>
 
-        <div class="experience-section">
-          <h2 class="section-title">Мои пет-проекты</h2>
-          <div class="experience-card">
+        <section class="experience-section" aria-labelledby="projects-title">
+          <h2 id="projects-title" class="section-title">Мои пет-проекты</h2>
+          
+          <article class="experience-card">
             <h3 class="experience-title">VK-contest-movie-app</h3>
             <p class="experience-desc">
               Веб-приложение для просмотра информации о
@@ -67,8 +72,9 @@
               пагинация, а также добавление в избранное (с сохранением в
               localStorage)
             </p>
-          </div>
-          <div class="experience-card">
+          </article>
+          
+          <article class="experience-card">
             <h3 class="experience-title">web-larek-frontend</h3>
             <p class="experience-desc">
               Веб-Ларек(web-larek-frontend на гитхабе). Одностраничное
@@ -77,8 +83,9 @@
               использования внешних фреймворков. Реализован полный цикл от
               выбора товара до оформления и валидации заказа.
             </p>
-          </div>
-          <div class="experience-card">
+          </article>
+          
+          <article class="experience-card">
             <h3 class="experience-title">Stellar-burgers</h3>
             <p class="experience-desc">
               Одностраничное приложение (SPA) с авторизацией, динамическим
@@ -88,10 +95,13 @@
               (redux-toolkit), React-router, JWT-tokens с сохранением в cokkie и
               localStorage.
             </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer">Футер</div>
+          </article>
+        </section>
+      </main>
+      
+      <footer class="footer">
+        <p>&copy; 2024 Семестровая работа. Все права защищены.</p>
+      </footer>
     </div>
   </body>
 </html>

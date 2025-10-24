@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
+        <header class="header">
+            <h1>Новости</h1>
+        </header>
 
         <nav class="nav">
             <ul class="nav-list">
@@ -22,36 +24,40 @@
         <main class="content">
             <h2 class="section-title">Новости</h2>
 
-            <article class="experience-card">
-                <h3 class="experience-title">GamerLegion прошла во вторую групповую стадию на ESL Pro League Season 22, победив B8 Esports</h3>
-                <div class="meta-info">
-                    <time datetime="2024-01-15">15 января 2024</time>
-                    <span>Автор: Иван Иванов</span>
-                </div>
-                <p class="experience-desc">
-                    GamerLegion обыграла B8 Esports на первом групповом этапе ESL Pro League Season 22 по CS2. Встреча завершилась со счетом 2:0 — 13:9 на Ancient и 13:11 на Inferno. Коллектив Фредрика REZ Стернера заработал слот во второй групповой стадии турнира.
-                </p>
-            </article>
+            <section class="news-list" aria-labelledby="news-title">
+                <h3 id="news-title" class="visually-hidden">Список новостей</h3>
+                
+                <article class="experience-card">
+                    <h4 class="experience-title">GamerLegion прошла во вторую групповую стадию на ESL Pro League Season 22, победив B8 Esports</h4>
+                    <div class="meta-info">
+                        <time datetime="2024-01-15">15 января 2024</time>
+                        <span>Автор: Иван Иванов</span>
+                    </div>
+                    <p class="experience-desc">
+                        GamerLegion обыграла B8 Esports на первом групповом этапе ESL Pro League Season 22 по CS2. Встреча завершилась со счетом 2:0 — 13:9 на Ancient и 13:11 на Inferno. Коллектив Фредрика REZ Стернера заработал слот во второй групповой стадии турнира.
+                    </p>
+                </article>
 
-            <article class="experience-card">
-                <h3 class="experience-title">«Ливерпуль», что с тобой? Звёздный «Галатасарай» задушил команду Слота в ЛЧ и выиграл!</h3>
-                <div class="meta-info">
-                    <time datetime="2024-01-14">14 января 2024</time>
-                    <span>Автор: Петр Петров</span>
-                </div>
-                <p class="experience-desc">«Ливерпуль» после первого в сезоне поражения от «Кристал Пэлас» (1:2) в АПЛ ожидал тяжёлый выезд. Во 2-м туре общего этапа Лиги чемпионов мерсисайдцы сыграли в Стамбуле с «Галатасараем». И снова у команды Арне Слота возникли серьёзные проблемы.</p>
-            </article>
+                <article class="experience-card">
+                    <h4 class="experience-title">«Ливерпуль», что с тобой? Звёздный «Галатасарай» задушил команду Слота в ЛЧ и выиграл!</h4>
+                    <div class="meta-info">
+                        <time datetime="2024-01-14">14 января 2024</time>
+                        <span>Автор: Петр Петров</span>
+                    </div>
+                    <p class="experience-desc">«Ливерпуль» после первого в сезоне поражения от «Кристал Пэлас» (1:2) в АПЛ ожидал тяжёлый выезд. Во 2-м туре общего этапа Лиги чемпионов мерсисайдцы сыграли в Стамбуле с «Галатасараем». И снова у команды Арне Слота возникли серьёзные проблемы.</p>
+                </article>
 
-            <article class="experience-card">
-                <h3 class="experience-title">«Кайрат» разгромно проиграл «Реалу» в матче Лиги чемпионов, Мбаппе оформил хет-трик</h3>
-                <div class="meta-info">
-                    <time datetime="2024-01-13">13 января 2024</time>
-                    <span>Автор: Мария Сидорова</span>
-                </div>
-                <p class="experience-desc">
-                    Завершился матч 2-го тура общего этапа Лиги чемпионов УЕФА, в котором встречались «Кайрат» и мадридский «Реал». Игра проходила на стадионе «Центральный» в городе Алма-Ата (Казахстан). В качестве главного арбитра встречи выступил Марко Гуида. Матч закончился со счётом 5:0 в пользу гостей.
-                </p>
-            </article>
+                <article class="experience-card">
+                    <h4 class="experience-title">«Кайрат» разгромно проиграл «Реалу» в матче Лиги чемпионов, Мбаппе оформил хет-трик</h4>
+                    <div class="meta-info">
+                        <time datetime="2024-01-13">13 января 2024</time>
+                        <span>Автор: Мария Сидорова</span>
+                    </div>
+                    <p class="experience-desc">
+                        Завершился матч 2-го тура общего этапа Лиги чемпионов УЕФА, в котором встречались «Кайрат» и мадридский «Реал». Игра проходила на стадионе «Центральный» в городе Алма-Ата (Казахстан). В качестве главного арбитра встречи выступил Марко Гуида. Матч закончился со счётом 5:0 в пользу гостей.
+                    </p>
+                </article>
+            </section>
         </main>
 
         <footer class="footer">
