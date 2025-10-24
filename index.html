@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,46 +9,44 @@
   <body>
     <div class="page-container">
       <header class="header">
-        <h1>Главная</h1>
+        <h1 class="header__title">Главная</h1>
+        <button class="header__theme-toggle" aria-label="Переключить тему">
+          <span class="header__theme-icon">🌙</span>
+        </button>
       </header>
-      
+
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="index.html">Главная</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/news.html">Новости</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/news.html">Новости</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/goods.html">Товары</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/goods.html">Товары</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/contacts.html">Контакты</a>
+          <li class="nav__item">
+            <a class="nav__link" href="pages/contacts.html">Контакты</a>
           </li>
         </ul>
       </nav>
-      
+
       <main class="content">
         <section class="profile-header" aria-labelledby="profile-title">
           <h1 id="profile-title" class="profile-title">Информация об авторе</h1>
-          <img
-            class="profile-photo"
-            src="images/photo.jpg"
-            alt="Фото автора"
-          />
+          <img class="profile-photo" src="images/photo.jpg" alt="Фото автора" />
           <h2 class="profile-name">Ланец Артем Николаевич</h2>
           <p class="profile-group">ЭФБО-02-24</p>
         </section>
 
-        <section class="about-me" aria-labelledby="about-title">
+        <section class="about" aria-labelledby="about-title">
           <h2 id="about-title" class="visually-hidden">Обо мне</h2>
-          <p>
-            Учусь в РТУ МИРЭА на фуллстек разработчика и хочу попасть на
-            работу
+          <p class="about_text">
+            Учусь в РТУ МИРЭА на фуллстек разработчика и хочу попасть на работу
           </p>
         </section>
-        
+
         <section class="skills-section" aria-labelledby="skills-title">
           <h2 id="skills-title" class="section-title">Навыки</h2>
           <div class="skills-container">
@@ -61,10 +59,10 @@
 
         <section class="experience-section" aria-labelledby="projects-title">
           <h2 id="projects-title" class="section-title">Мои пет-проекты</h2>
-          
-          <article class="experience-card">
-            <h3 class="experience-title">VK-contest-movie-app</h3>
-            <p class="experience-desc">
+
+          <article class="card card--selected">
+            <h3 class="card__title">VK-contest-movie-app</h3>
+            <p class="card__description">
               Веб-приложение для просмотра информации о
               фильмах(VK-contest-movie-app на гитхабе). В этом проекте я
               использовал: React/Ts, стейт менеджер MobX, REST API(Axios),
@@ -73,10 +71,10 @@
               localStorage)
             </p>
           </article>
-          
-          <article class="experience-card">
-            <h3 class="experience-title">web-larek-frontend</h3>
-            <p class="experience-desc">
+
+          <article class="card card--selected">
+            <h3 class="card__title">web-larek-frontend</h3>
+            <p class="card__description">
               Веб-Ларек(web-larek-frontend на гитхабе). Одностраничное
               приложение (SPA) – интернет-магазин товаров. Проект реализован на
               чистой архитектуре и собственная реализации паттернов без
@@ -84,10 +82,10 @@
               выбора товара до оформления и валидации заказа.
             </p>
           </article>
-          
-          <article class="experience-card">
-            <h3 class="experience-title">Stellar-burgers</h3>
-            <p class="experience-desc">
+
+          <article class="card card--selected">
+            <h3 class="card__title">Stellar-burgers</h3>
+            <p class="card__description">
               Одностраничное приложение (SPA) с авторизацией, динамическим
               обновлением данных через WebSocket и полным циклом взаимодействия:
               от выбора ингредиентов до отслеживания истории заказов. В проекте
@@ -98,10 +96,12 @@
           </article>
         </section>
       </main>
-      
+
       <footer class="footer">
         <p>&copy; 2025 Мой сайт. Все права защищены.</p>
       </footer>
     </div>
+    <script src="./theme.js"></script>
+    <script src="./cards.js"></script>
   </body>
 </html>

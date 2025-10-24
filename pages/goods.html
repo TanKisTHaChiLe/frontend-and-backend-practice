@@ -1,55 +1,85 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru" data-theme="light">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/styles.css" />
     <title>Каталог товаров</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page-container">
-        <header class="header">
-            <h1>Каталог товаров</h1>
-        </header>
+      <header class="header">
+        <h1 class="header__title">Каталог товаров</h1>
+        <button class="header__theme-toggle" aria-label="Переключить тему">
+          <span class="header__theme-icon">🌙</span>
+        </button>
+      </header>
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="./news.html" class="nav-link">Новости</a></li>
-                <li class="nav-item"><a href="./goods.html" class="nav-link">Товары</a></li>
-                <li class="nav-item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="./news.html" class="nav__link">Новости</a>
+          </li>
+          <li class="nav__item">
+            <a href="./goods.html" class="nav__link nav__link--active"
+              >Товары</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="./contacts.html" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
 
-        <main class="content">
-            <h2 class="section-title">Каталог товаров</h2>
+      <main class="content">
+        <h2 class="section-title">Каталог товаров</h2>
 
-            <section class="products-grid" aria-labelledby="products-title">
-                <h3 id="products-title" class="visually-hidden">Список товаров</h3>
-                
-                <article class="product-card">
-                    <img src="../images/product1.jpg" alt="Полка с товарами" class="product-image">
-                    <h4 class="product-title">Полка с товарами</h4>
-                    <p class="product-price">1000 руб.</p>
-                </article>
+        <section class="products-grid" aria-labelledby="products-title">
+          <h3 id="products-title" class="visually-hidden">Список товаров</h3>
 
-                <article class="product-card">
-                    <img src="../images/product2.jpg" alt="Дверь со старой ручкой" class="product-image">
-                    <h4 class="product-title">Дверь со старой ручкой</h4>
-                    <p class="product-price">1500 руб.</p>
-                </article>
+          <article class="product-card product-card--selected">
+            <img
+              src="../images/product1.jpg"
+              alt="Полка с товарами"
+              class="product-card__image"
+            />
+            <h4 class="product-card__title">Полка с товарами</h4>
+            <p class="product-card__price">
+              <span class="product-card__price--old">1500 руб.</span>
+              1000 руб.
+            </p>
+          </article>
 
-                <article class="product-card">
-                    <img src="../images/product4.jpg" alt="Картина мироздания" class="product-image">
-                    <h4 class="product-title">Картина мироздания</h4>
-                    <p class="product-price">2000 руб.</p>
-                </article>
-            </section>
-        </main>
+          <article class="product-card product-card--selected">
+            <img
+              src="../images/product2.jpg"
+              alt="Дверь со старой ручкой"
+              class="product-card__image"
+            />
+            <h4 class="product-card__title">Дверь со старой ручкой</h4>
+            <p class="product-card__price">1500 руб.</p>
+          </article>
 
-        <footer class="footer">
-            <p>&copy; 2025 Мой сайт. Все права защищены.</p>
-        </footer>
+          <article class="product-card product-card--selected">
+            <img
+              src="../images/product4.jpg"
+              alt="Картина мироздания"
+              class="product-card__image"
+            />
+            <h4 class="product-card__title">Картина мироздания</h4>
+            <p class="product-card__price">2000 руб.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+      </footer>
     </div>
-</body>
+    <script src="../theme.js"></script>
+    <script src="../cards.js"></script>
+  </body>
 </html>
