@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../style/styles.css" />
     <title>Каталог товаров</title>
   </head>
@@ -40,38 +44,54 @@
         <section class="products-grid" aria-labelledby="products-title">
           <h3 id="products-title" class="visually-hidden">Список товаров</h3>
 
-          <article class="product-card product-card--selected">
-            <img
-              src="../images/product1.jpg"
-              alt="Полка с товарами"
-              class="product-card__image"
-            />
-            <h4 class="product-card__title">Полка с товарами</h4>
-            <p class="product-card__price">
-              <span class="product-card__price--old">1500 руб.</span>
-              1000 руб.
-            </p>
-          </article>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+              >
+                <article class="product-card product-card--selected">
+                  <img
+                    src="../images/product1.jpg"
+                    alt="Полка с товарами"
+                    class="product-card__image"
+                  />
+                  <h4 class="product-card__title">Полка с товарами</h4>
+                  <p class="product-card__price">
+                    <span class="product-card__price--old">1500 руб.</span>
+                    1000 руб.
+                  </p>
+                </article>
+              </div>
 
-          <article class="product-card product-card--selected">
-            <img
-              src="../images/product2.jpg"
-              alt="Дверь со старой ручкой"
-              class="product-card__image"
-            />
-            <h4 class="product-card__title">Дверь со старой ручкой</h4>
-            <p class="product-card__price">1500 руб.</p>
-          </article>
+              <div
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+              >
+                <article class="product-card product-card--selected">
+                  <img
+                    src="../images/product2.jpg"
+                    alt="Дверь со старой ручкой"
+                    class="product-card__image"
+                  />
+                  <h4 class="product-card__title">Дверь со старой ручкой</h4>
+                  <p class="product-card__price">1500 руб.</p>
+                </article>
+              </div>
 
-          <article class="product-card product-card--selected">
-            <img
-              src="../images/product4.jpg"
-              alt="Картина мироздания"
-              class="product-card__image"
-            />
-            <h4 class="product-card__title">Картина мироздания</h4>
-            <p class="product-card__price">2000 руб.</p>
-          </article>
+              <div
+                class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4"
+              >
+                <article class="product-card product-card--selected">
+                  <img
+                    src="../images/product4.jpg"
+                    alt="Картина мироздания"
+                    class="product-card__image"
+                  />
+                  <h4 class="product-card__title">Картина мироздания</h4>
+                  <p class="product-card__price">2000 руб.</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
@@ -79,6 +99,7 @@
         <p>&copy; 2025 Мой сайт. Все права защищены.</p>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../theme.js"></script>
     <script src="../cards.js"></script>
   </body>

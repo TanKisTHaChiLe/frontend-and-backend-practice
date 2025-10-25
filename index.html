@@ -4,104 +4,373 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #667eea;
+        --color-primary-dark: #764ba2;
+        --color-secondary: #2c3e50;
+        --color-secondary-dark: #34495e;
+        --color-accent: #4facfe;
+        --color-accent-light: #00f2fe;
+        --color-text: #2c3e50;
+        --color-text-light: #7f8c8d;
+        --color-background: white;
+        --color-surface: #f8f9fa;
+        --color-border: #e9ecef;
+        --color-white: white;
+      }
+
+      [data-theme="dark"] {
+        --color-primary: #764ba2;
+        --color-primary-dark: #667eea;
+        --color-secondary: #34495e;
+        --color-secondary-dark: #2c3e50;
+        --color-text: #ecf0f1;
+        --color-text-light: #bdc3c7;
+        --color-background: #2c3e50;
+        --color-surface: #34495e;
+        --color-border: #4a6278;
+        --color-white: #ecf0f1;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          var(--color-primary) 0%,
+          var(--color-primary-dark) 100%
+        ) !important;
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .header-custom {
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary) 0%,
+          var(--color-secondary-dark) 100%
+        );
+      }
+
+      .nav-custom {
+        background: var(--color-secondary);
+      }
+
+      .footer-custom {
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary) 0%,
+          var(--color-secondary-dark) 100%
+        );
+      }
+
+      .profile-title,
+      .profile-name {
+        color: var(--color-text);
+      }
+
+      .profile-group {
+        color: var(--color-text-light);
+      }
+
+      .about-section {
+        background: linear-gradient(
+          135deg,
+          var(--color-surface) 0%,
+          var(--color-border) 100%
+        );
+        border-left-color: var(--color-primary) !important;
+      }
+
+      .about-text {
+        color: var(--color-text-light);
+      }
+
+      .section-title {
+        color: var(--color-text);
+      }
+
+      .card-title-custom {
+        color: var(--color-text);
+      }
+
+      .card-description {
+        color: var(--color-text-light);
+      }
+
+      .skill-tag {
+        background: linear-gradient(
+          135deg,
+          var(--color-accent) 0%,
+          var(--color-accent-light) 100%
+        );
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        transition: all 0.3s ease;
+      }
+      .skill-tag:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+      }
+      .nav-link-custom.active {
+        background: rgba(255, 255, 255, 0.2) !important;
+      }
+      .nav-link-custom:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.1) !important;
+        transform: translateY(-2px);
+      }
+      .nav-link-custom {
+        transition: all 0.3s ease;
+      }
+      .header__theme-toggle {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        transition: all 0.3s ease;
+      }
+      .header__theme-toggle:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        transform: scale(1.1);
+        border-color: rgba(255, 255, 255, 0.5) !important;
+      }
+      .project-card {
+        border-left: 4px solid var(--color-primary);
+        transition: all 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+        border-color: var(--color-primary) !important;
+      }
+      .project-card--selected {
+        border-left-color: var(--color-accent) !important;
+        border-color: var(--color-accent) !important;
+        background: linear-gradient(
+          135deg,
+          var(--color-surface) 0%,
+          var(--color-background) 100%
+        );
+      }
+    </style>
   </head>
-  <body>
-    <div class="page-container">
-      <header class="header">
-        <h1 class="header__title">Главная</h1>
-        <button class="header__theme-toggle" aria-label="Переключить тему">
+  <body class="min-vh-100">
+    <div
+      class="container-lg p-0 min-vh-100 mx-auto shadow-lg"
+      style="max-width: 1200px; background: var(--color-background)"
+    >
+      <header
+        class="text-white text-center py-4 position-relative header-custom"
+      >
+        <h1 class="display-6 fw-light" style="letter-spacing: 2px">Главная</h1>
+        <button
+          class="btn header__theme-toggle position-absolute top-0 end-0 m-3 rounded-circle"
+          style="width: 50px; height: 50px"
+          aria-label="Переключить тему"
+        >
           <span class="header__theme-icon">🌙</span>
         </button>
       </header>
 
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link nav__link--active" href="index.html">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="pages/news.html">Новости</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="pages/goods.html">Товары</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="pages/contacts.html">Контакты</a>
-          </li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark py-3 nav-custom">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white rounded-pill px-4 py-2 nav-link-custom active"
+                  href="index.html"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white rounded-pill px-4 py-2 nav-link-custom"
+                  href="pages/news.html"
+                  >Новости</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white rounded-pill px-4 py-2 nav-link-custom"
+                  href="pages/goods.html"
+                  >Товары</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white rounded-pill px-4 py-2 nav-link-custom"
+                  href="pages/contacts.html"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
-      <main class="content">
-        <section class="profile-header" aria-labelledby="profile-title">
-          <h1 id="profile-title" class="profile-title">Информация об авторе</h1>
-          <img class="profile-photo" src="images/photo.jpg" alt="Фото автора" />
-          <h2 class="profile-name">Ланец Артем Николаевич</h2>
+      <main class="container py-5" style="max-width: 900px">
+        <section class="text-center mb-5">
+          <h1 class="mb-4 profile-title">Информация об авторе</h1>
+          <img
+            class="rounded-circle border border-4 mb-3 object-fit-cover"
+            src="images/photo.jpg"
+            alt="Фото автора"
+            width="150"
+            height="150"
+            style="border-color: var(--color-primary) !important"
+          />
+          <h2 class="mb-2 profile-name">Ланец Артем Николаевич</h2>
           <p class="profile-group">ЭФБО-02-24</p>
         </section>
 
-        <section class="about" aria-labelledby="about-title">
-          <h2 id="about-title" class="visually-hidden">Обо мне</h2>
-          <p class="about_text">
+        <section class="p-4 rounded-4 mb-5 border-start border-5 about-section">
+          <p class="mb-0 about-text">
             Учусь в РТУ МИРЭА на фуллстек разработчика и хочу попасть на работу
           </p>
         </section>
 
-        <section class="skills-section" aria-labelledby="skills-title">
-          <h2 id="skills-title" class="section-title">Навыки</h2>
-          <div class="skills-container">
-            <span class="skill-tag">JavaScript/TypeScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Webpack/Vite/CRA</span>
-            <span class="skill-tag">MVP/MVC</span>
+        <section class="mb-5">
+          <h2 class="text-center fw-light mb-4 display-6 section-title">
+            Навыки
+          </h2>
+          <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <span
+              class="skill-tag text-white px-3 py-2 rounded-pill fw-semibold"
+              >JavaScript/TypeScript</span
+            >
+            <span
+              class="skill-tag text-white px-3 py-2 rounded-pill fw-semibold"
+              >React</span
+            >
+            <span
+              class="skill-tag text-white px-3 py-2 rounded-pill fw-semibold"
+              >Webpack/Vite/CRA</span
+            >
+            <span
+              class="skill-tag text-white px-3 py-2 rounded-pill fw-semibold"
+              >MVP/MVC</span
+            >
           </div>
         </section>
 
-        <section class="experience-section" aria-labelledby="projects-title">
-          <h2 id="projects-title" class="section-title">Мои пет-проекты</h2>
+        <section>
+          <h2 class="text-center fw-light mb-4 display-6 section-title">
+            Мои пет-проекты
+          </h2>
 
-          <article class="card card--selected">
-            <h3 class="card__title">VK-contest-movie-app</h3>
-            <p class="card__description">
-              Веб-приложение для просмотра информации о
-              фильмах(VK-contest-movie-app на гитхабе). В этом проекте я
-              использовал: React/Ts, стейт менеджер MobX, REST API(Axios),
-              реализовал: поиск по названию, фильтрация по жанрам и годам,
-              пагинация, а также добавление в избранное (с сохранением в
-              localStorage)
-            </p>
-          </article>
+          <div
+            class="card project-card project-card--selected border-0 shadow-sm mb-3"
+          >
+            <div class="card-body p-4">
+              <h3 class="card-title fw-semibold mb-3 card-title-custom">
+                VK-contest-movie-app
+              </h3>
+              <p class="card-text mb-0 card-description">
+                Веб-приложение для просмотра информации о
+                фильмах(VK-contest-movie-app на гитхабе). В этом проекте я
+                использовал: React/Ts, стейт менеджер MobX, REST API(Axios),
+                реализовал: поиск по названию, фильтрация по жанрам и годам,
+                пагинация, а также добавление в избранное (с сохранением в
+                localStorage)
+              </p>
+            </div>
+          </div>
 
-          <article class="card card--selected">
-            <h3 class="card__title">web-larek-frontend</h3>
-            <p class="card__description">
-              Веб-Ларек(web-larek-frontend на гитхабе). Одностраничное
-              приложение (SPA) – интернет-магазин товаров. Проект реализован на
-              чистой архитектуре и собственная реализации паттернов без
-              использования внешних фреймворков. Реализован полный цикл от
-              выбора товара до оформления и валидации заказа.
-            </p>
-          </article>
+          <div
+            class="card project-card project-card--selected border-0 shadow-sm mb-3"
+          >
+            <div class="card-body p-4">
+              <h3 class="card-title fw-semibold mb-3 card-title-custom">
+                web-larek-frontend
+              </h3>
+              <p class="card-text mb-0 card-description">
+                Веб-Ларек(web-larek-frontend на гитхабе). Одностраничное
+                приложение (SPA) – интернет-магазин товаров. Проект реализован
+                на чистой архитектуре и собственная реализации паттернов без
+                использования внешних фреймворков. Реализован полный цикл от
+                выбора товара до оформления и валидации заказа.
+              </p>
+            </div>
+          </div>
 
-          <article class="card card--selected">
-            <h3 class="card__title">Stellar-burgers</h3>
-            <p class="card__description">
-              Одностраничное приложение (SPA) с авторизацией, динамическим
-              обновлением данных через WebSocket и полным циклом взаимодействия:
-              от выбора ингредиентов до отслеживания истории заказов. В проекте
-              я использовал следующие технологии: React/Ts, стейт менеджер Redux
-              (redux-toolkit), React-router, JWT-tokens с сохранением в cokkie и
-              localStorage.
-            </p>
-          </article>
+          <div
+            class="card project-card project-card--selected border-0 shadow-sm mb-3"
+          >
+            <div class="card-body p-4">
+              <h3 class="card-title fw-semibold mb-3 card-title-custom">
+                Stellar-burgers
+              </h3>
+              <p class="card-text mb-0 card-description">
+                Одностраничное приложение (SPA) с авторизацией, динамическим
+                обновлением данных через WebSocket и полным циклом
+                взаимодействия: от выбора ингредиентов до отслеживания истории
+                заказов. В проекте я использовал следующие технологии: React/Ts,
+                стейт менеджер Redux (redux-toolkit), React-router, JWT-tokens с
+                сохранением в cokkie и localStorage.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer class="footer">
-        <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+      <footer class="text-white text-center py-4 mt-auto footer-custom">
+        <p class="mb-0">&copy; 2025 Мой сайт. Все права защищены.</p>
       </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./theme.js"></script>
-    <script src="./cards.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".project-card");
+        const skillTags = document.querySelectorAll(".skill-tag");
+        const navLinks = document.querySelectorAll(".nav-link-custom");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateX(5px)";
+          });
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateX(0)";
+          });
+        });
+
+        skillTags.forEach((tag) => {
+          tag.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-3px)";
+            this.style.boxShadow = "0 6px 20px rgba(79, 172, 254, 0.4)";
+          });
+          tag.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+            this.style.boxShadow = "0 4px 15px rgba(79, 172, 254, 0.3)";
+          });
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("mouseenter", function () {
+            if (!this.classList.contains("active")) {
+              this.style.transform = "translateY(-2px)";
+            }
+          });
+          link.addEventListener("mouseleave", function () {
+            if (!this.classList.contains("active")) {
+              this.style.transform = "translateY(0)";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
